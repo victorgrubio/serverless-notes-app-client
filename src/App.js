@@ -13,6 +13,8 @@ function App() {
   const [isAuthenticated, userHasAuthenticated] = useState(false);
 
   function handleLogout(){
+    await Auth.signOut();
+
     userHasAuthenticated(false);
   }
   useEffect(() => {
